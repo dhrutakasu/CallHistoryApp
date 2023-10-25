@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_splash"
+    tools:context=".Ui.Activity.StartActivity">
+
+
+    <TextView
+        android:id="@+id/TCallHistory"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_margin="@dimen/_15sdp"
+        android:background="@drawable/ic_btn_view"
+        android:drawableStart="@drawable/ic_call_history"
+        android:drawablePadding="@dimen/_18sdp"
+        android:gravity="center_vertical"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:padding="@dimen/_18sdp"
+        android:text="Call History"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_22sdp"
+        app:layout_constraintBottom_toTopOf="@id/guideCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/TCallId"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_margin="@dimen/_15sdp"
+        android:background="@drawable/ic_btn_view"
+        android:drawableStart="@drawable/ic_call_id"
+        android:drawablePadding="@dimen/_18sdp"
+        android:gravity="center_vertical"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:padding="@dimen/_18sdp"
+        android:text="Call Id"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_22sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideCenter" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

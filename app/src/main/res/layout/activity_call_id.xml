@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_splash"
+    tools:context=".Ui.Activity.CallIdActivity">
+
+    <RelativeLayout
+        android:id="@+id/RlHeaderBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/layout_header" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/RlHeaderBar">
+
+        <TextView
+            android:id="@+id/BtnLocation"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="@dimen/_8sdp"
+            android:background="@drawable/ic_btn_view"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="Find Location"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toStartOf="@+id/BtnSystemUsage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideTop" />
+
+        <TextView
+            android:id="@+id/BtnSystemUsage"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="@dimen/_8sdp"
+            android:background="@drawable/ic_btn_view"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="System Usage"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/BtnLocation"
+            app:layout_constraintTop_toTopOf="@id/guideTop" />
+
+        <TextView
+            android:id="@+id/BtnBattery"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="@dimen/_8sdp"
+            android:background="@drawable/ic_btn_view"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="Find Location"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toStartOf="@+id/BtnDevice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/BtnLocation" />
+
+        <TextView
+            android:id="@+id/BtnDevice"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="@dimen/_8sdp"
+            android:background="@drawable/ic_btn_view"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="System Usage"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/BtnBattery"
+            app:layout_constraintTop_toBottomOf="@id/BtnSystemUsage" />
+
+        <TextView
+            android:id="@+id/BtnISD"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="@dimen/_8sdp"
+            android:background="@drawable/ic_btn_view"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="ISD"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toStartOf="@+id/BtnStd"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/BtnBattery" />
+
+        <TextView
+            android:id="@+id/BtnStd"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="@dimen/_8sdp"
+            android:background="@drawable/ic_btn_view"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="STD"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/BtnISD"
+            app:layout_constraintTop_toBottomOf="@id/BtnDevice" />
+
+        <TextView
+            android:id="@+id/BtnBank"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="@dimen/_8sdp"
+            android:background="@drawable/ic_btn_view"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="Bank Services"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintWidth_percent="0.48"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/BtnISD" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
