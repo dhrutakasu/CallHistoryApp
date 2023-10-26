@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_splash"
     tools:context=".Ui.Activity.DeviceActivity">
 
     <RelativeLayout
@@ -33,7 +34,7 @@
             android:layout_marginTop="@dimen/_20sdp"
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center_vertical"
-            android:text="Device Info :"
+            android:text="@string/device_info_dot"
             android:textColor="@color/black"
             android:textSize="@dimen/_18sdp"
             android:textStyle="bold"
@@ -71,7 +72,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Device Name"
+                        android:text="@string/device_name"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
                         android:fontFamily="sans-serif-condensed-medium"
@@ -105,7 +106,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Model Name"
+                        android:text="@string/model_name"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
                         android:fontFamily="sans-serif-condensed-medium"
@@ -139,7 +140,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Brand Name"
+                        android:text="@string/brand_name"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
                         android:fontFamily="sans-serif-condensed-medium"
@@ -173,7 +174,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Product Code"
+                        android:text="@string/product_code"
                         android:textColor="@color/black"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:textSize="@dimen/_15sdp"
@@ -207,7 +208,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="IMEI No."
+                        android:text="@string/imei_no"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
@@ -231,4 +232,31 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/RlAdvertisement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:gravity="bottom|center"
+        app:layout_constraintTop_toBottomOf="@id/scrollView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.facebook.ads.NativeAdLayout
+            android:id="@+id/NativeBannerAdContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <ProgressBar
+            android:id="@+id/progressBarAd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp" />
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

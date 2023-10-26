@@ -8,15 +8,22 @@
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/drawable/ic_arrow.xml" value="0.1" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/drawable/ic_btn_view.xml" value="0.1" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/drawable/ic_view_unpressed.xml" value="0.1" />
+        <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_bank.xml" value="0.13425925925925927" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_battery.xml" value="0.2" />
+        <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_call_history.xml" value="0.13425925925925927" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_call_id.xml" value="0.16" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_device.xml" value="0.2" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_find_location.xml" value="0.19" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_isdactivity.xml" value="0.2" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_main.xml" value="0.18" />
-        <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_policy.xml" value="0.2" />
+        <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_policy.xml" value="0.33" />
+        <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_share_detail_option.xml" value="0.2" />
+        <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_show_bank_data.xml" value="0.13425925925925927" />
+        <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_show_email_address.xml" value="0.13425925925925927" />
+        <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_show_history.xml" value="0.2" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_splash.xml" value="0.18" />
-        <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_start.xml" value="0.14" />
+        <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_start.xml" value="0.21" />
+        <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_stdactivity.xml" value="0.13425925925925927" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/activity_system_usage.xml" value="0.18" />
         <entry key="..\:/Dhruta/Dhruta project/Client/Manish patel/CallHistoryApplication/CallHistoryApp/app/src/main/res/layout/layout_header.xml" value="0.2" />
       </map>

@@ -13,9 +13,12 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.call.historyapp.Const.ScreenAdsClass;
 import com.call.historyapp.R;
 
 import java.io.BufferedReader;
@@ -73,7 +76,8 @@ public class FindLocationActivity extends AppCompatActivity implements View.OnCl
     }
 
     private void CallInitActions() {
-        TvTitle.setText("Find Location");
+        ScreenAdsClass.ShowScreenNativeAds(context, ((ProgressBar) findViewById(R.id.progressBarAd)), (RelativeLayout) findViewById(R.id.RlAdvertisement));
+        TvTitle.setText(R.string.find_location);
     }
 
     @Override
@@ -101,7 +105,7 @@ public class FindLocationActivity extends AppCompatActivity implements View.OnCl
     }
 
     private void GotoCall() {
-        Intent in = new Intent("android.intent.action.CALL");
+        Intent in = new Intent(Intent.ACTION_CALL);
         in.setData(Uri.parse("tel:+91" + TvNumber.getText().toString()));
         startActivity(in);
     }

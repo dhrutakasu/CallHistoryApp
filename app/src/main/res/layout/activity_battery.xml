@@ -21,7 +21,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/RlAdvertisement"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/RlHeaderBar">
@@ -34,7 +34,7 @@
             android:layout_marginTop="@dimen/_20sdp"
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center_vertical"
-            android:text="Battery Info :"
+            android:text="@string/battery_info"
             android:textColor="@color/black"
             android:textSize="@dimen/_18sdp"
             android:textStyle="bold"
@@ -73,7 +73,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Battery Level"
+                        android:text="@string/battery_level"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold"
@@ -107,7 +107,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Battery Status"
+                        android:text="@string/battery_status"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
                         android:fontFamily="sans-serif-condensed-medium"
@@ -141,7 +141,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Battery Health"
+                        android:text="@string/battery_health"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold"
@@ -175,7 +175,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Battery Temp."
+                        android:text="@string/battery_temp"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold"
@@ -209,7 +209,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Battery Tech."
+                        android:text="@string/battery_tech"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold"
@@ -243,7 +243,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Battery Voltage"
+                        android:text="@string/battery_voltage"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold"
@@ -279,7 +279,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Battery Uptime"
+                        android:text="@string/battery_uptime"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold"
@@ -303,4 +303,31 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/RlAdvertisement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:gravity="bottom|center"
+        app:layout_constraintTop_toBottomOf="@id/scrollView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.facebook.ads.NativeAdLayout
+            android:id="@+id/NativeBannerAdContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <ProgressBar
+            android:id="@+id/progressBarAd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp" />
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

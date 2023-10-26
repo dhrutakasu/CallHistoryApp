@@ -18,10 +18,39 @@
         <include layout="@layout/layout_header" />
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/RlAdvertisement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:gravity="bottom|center"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.facebook.ads.NativeAdLayout
+            android:id="@+id/NativeBannerAdContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+        <ProgressBar
+            android:id="@+id/progressBarAd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/RlAdvertisement"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/RlHeaderBar">
@@ -34,7 +63,7 @@
             android:layout_marginTop="@dimen/_20sdp"
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center_vertical"
-            android:text="RAM Info :"
+            android:text="@string/ram_info"
             android:textColor="@color/black"
             android:textSize="@dimen/_18sdp"
             android:textStyle="bold"
@@ -73,7 +102,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Used RAM"
+                        android:text="@string/used_ram"
                         android:textColor="@color/black"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:textSize="@dimen/_15sdp"
@@ -107,7 +136,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Free RAM"
+                        android:text="@string/free_ram"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold"
@@ -140,7 +169,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Total RAM"
+                        android:text="@string/total_ram"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold"
@@ -171,7 +200,7 @@
             android:layout_marginTop="@dimen/_20sdp"
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center_vertical"
-            android:text="Internal Storage Info :"
+            android:text="@string/internal_storage_info"
             android:textColor="@color/black"
             android:textSize="@dimen/_18sdp"
             android:textStyle="bold"
@@ -210,7 +239,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Free Space"
+                        android:text="@string/free_space"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
                         android:fontFamily="sans-serif-condensed-medium"
@@ -243,7 +272,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Total Space"
+                        android:text="@string/total_space"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
                         android:fontFamily="sans-serif-condensed-medium"
@@ -274,7 +303,7 @@
             android:layout_marginTop="@dimen/_20sdp"
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center_vertical"
-            android:text="External Storage Info :"
+            android:text="@string/external_storage_info"
             android:textColor="@color/black"
             android:textSize="@dimen/_18sdp"
             android:textStyle="bold"
@@ -313,7 +342,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Free Space"
+                        android:text="@string/free_space"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
                         android:fontFamily="sans-serif-condensed-medium"
@@ -346,7 +375,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Total Space"
+                        android:text="@string/total_space"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
                         android:fontFamily="sans-serif-condensed-medium"

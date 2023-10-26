@@ -44,7 +44,7 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:gravity="center"
                 android:padding="@dimen/_10sdp"
-                android:text="Find Location"
+                android:text="@string/find_location"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_14sdp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -86,7 +86,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed-medium"
-                        android:text="+ 91"
+                        android:text="@string/_91"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_16sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -146,9 +146,10 @@
                 android:layout_marginStart="@dimen/_8sdp"
                 android:layout_marginEnd="@dimen/_8sdp"
                 android:padding="@dimen/_6sdp"
+                app:cardElevation="@dimen/_10sdp"
                 app:cardBackgroundColor="#E0E0E0"
                 app:cardCornerRadius="@dimen/_10sdp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/RlAdvertisement"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -203,7 +204,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text=""
-                                android:textColor="@color/white"
+                                android:fontFamily="sans-serif-condensed-medium"
+                                android:textColor="@color/black"
                                 android:textSize="@dimen/_15sdp"
                                 android:textStyle="bold"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -215,7 +217,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/_3sdp"
                                 android:text=""
-                                android:textColor="@color/white"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="@color/black"
                                 android:textSize="@dimen/_14sdp"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/TvNumber" />
@@ -226,7 +229,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/_3sdp"
                                 android:text=""
-                                android:textColor="@color/white"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="@color/black"
                                 android:textSize="@dimen/_14sdp"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/TvNetwork" />
@@ -338,4 +342,29 @@
             </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/RlAdvertisement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:gravity="bottom|center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBarAd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp" />
+
+        <com.facebook.ads.NativeAdLayout
+            android:id="@+id/NativeBannerAdContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,11 +11,14 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.call.historyapp.BuildConfig;
 import com.call.historyapp.Const.AppConst;
+import com.call.historyapp.Const.ScreenAdsClass;
 import com.call.historyapp.R;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void CallInitActions() {
-
+        ScreenAdsClass.ShowScreenNativeAds(context, ((ProgressBar) findViewById(R.id.progressBarAd)), (RelativeLayout) findViewById(R.id.RlAdvertisement));
     }
 
     @Override

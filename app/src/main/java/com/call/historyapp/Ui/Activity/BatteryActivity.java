@@ -2,7 +2,6 @@ package com.call.historyapp.Ui.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -10,8 +9,11 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.call.historyapp.Const.ScreenAdsClass;
 import com.call.historyapp.R;
 
 public class BatteryActivity extends AppCompatActivity implements View.OnClickListener {
@@ -48,7 +50,8 @@ public class BatteryActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void CallInitActions() {
-        TvTitle.setText("Battery Info");
+        ScreenAdsClass.ShowScreenNativeAds(context, ((ProgressBar) findViewById(R.id.progressBarAd)), (RelativeLayout) findViewById(R.id.RlAdvertisement));
+        TvTitle.setText(R.string.battery_info_none);
         intent = registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
         StringBuilder builder = new StringBuilder();
         int level = intent.getIntExtra("level", -1);

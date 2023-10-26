@@ -7,21 +7,48 @@
     android:background="@drawable/ic_splash"
     tools:context=".Ui.Activity.MainActivity">
 
+    <RelativeLayout
+        android:id="@+id/RlAdvertisement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:gravity="bottom|center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBarAd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp" />
+
+        <com.facebook.ads.NativeAdLayout
+            android:id="@+id/NativeBannerAdContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/BtnStart"
         android:layout_width="0dp"
         android:layout_height="@dimen/_60sdp"
         android:layout_margin="@dimen/_8sdp"
-        android:text="Start"
+        android:background="@drawable/ic_btn_view"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:text="@string/start"
         android:textColor="@color/white"
         android:textSize="@dimen/_22sdp"
-        android:gravity="center"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:background="@drawable/ic_btn_view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/BtnMoreApps"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/RlAdvertisement" />
 
     <TextView
         android:id="@+id/BtnMoreApps"
@@ -29,37 +56,37 @@
         android:layout_height="@dimen/_60sdp"
         android:layout_margin="@dimen/_8sdp"
         android:background="@drawable/ic_btn_view"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="More Apps"
         android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:text="@string/more_apps"
         android:textColor="@color/white"
         android:textSize="@dimen/_22sdp"
-        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/BtnStart"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/RlAdvertisement" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/ConsRate"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.08"
-        android:layout_marginTop="@dimen/_20sdp"
-        app:layout_constraintWidth_percent="0.25"
         android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintHeight_percent="0.08"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BtnStart">
+        app:layout_constraintTop_toBottomOf="@+id/BtnStart"
+        app:layout_constraintWidth_percent="0.25">
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/ic_btn_view"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:padding="@dimen/_10sdp"
             android:src="@drawable/ic_rate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/white" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -67,23 +94,23 @@
         android:id="@+id/ConsShare"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.08"
         android:layout_marginTop="@dimen/_20sdp"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintStart_toEndOf="@+id/ConsRate"
         app:layout_constraintEnd_toStartOf="@+id/ConsPrivacy"
-        app:layout_constraintTop_toBottomOf="@+id/BtnStart">
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toEndOf="@+id/ConsRate"
+        app:layout_constraintTop_toBottomOf="@+id/BtnStart"
+        app:layout_constraintWidth_percent="0.25">
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/ic_btn_view"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:padding="@dimen/_10sdp"
             android:src="@drawable/ic_share"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/white" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -91,23 +118,23 @@
         android:id="@+id/ConsPrivacy"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.08"
         android:layout_marginTop="@dimen/_20sdp"
-        app:layout_constraintWidth_percent="0.25"
         android:layout_marginEnd="@dimen/_20sdp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BtnStart">
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintTop_toBottomOf="@+id/BtnStart"
+        app:layout_constraintWidth_percent="0.25">
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/ic_btn_view"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:padding="@dimen/_10sdp"
             android:src="@drawable/ic_privacy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/white" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

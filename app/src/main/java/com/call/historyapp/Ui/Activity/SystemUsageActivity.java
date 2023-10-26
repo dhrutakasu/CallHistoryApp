@@ -1,19 +1,20 @@
 package com.call.historyapp.Ui.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.StatFs;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.call.historyapp.Const.AppConst;
+import com.call.historyapp.Const.ScreenAdsClass;
 import com.call.historyapp.R;
 
 import java.io.IOException;
@@ -55,7 +56,8 @@ public class SystemUsageActivity extends AppCompatActivity implements View.OnCli
     }
 
     private void CallInitActions() {
-        TvTitle.setText("System Usage");
+        ScreenAdsClass.ShowScreenBannerAds(context, ((ProgressBar) findViewById(R.id.progressBarAd)), (RelativeLayout) findViewById(R.id.RlAdvertisement));
+        TvTitle.setText(R.string.system_usage);
         Pattern compile = Pattern.compile("([a-zA-Z]+):\\s*(\\d+)");
         try {
             RandomAccessFile randomAccessFile = new RandomAccessFile("/proc/meminfo", "r");

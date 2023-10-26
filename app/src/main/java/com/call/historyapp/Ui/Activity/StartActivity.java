@@ -1,14 +1,16 @@
 package com.call.historyapp.Ui.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.call.historyapp.Const.ScreenAdsClass;
 import com.call.historyapp.R;
 
 public class StartActivity extends AppCompatActivity implements View.OnClickListener {
@@ -37,17 +39,27 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void CallInitActions() {
-
+        ScreenAdsClass.ShowScreenNativeAds(context, ((ProgressBar) findViewById(R.id.progressBarAd)), (RelativeLayout) findViewById(R.id.RlAdvertisement));
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.TCallHistory:
-                startActivity(new Intent(context, CallHistoryActivity.class));
+                ScreenAdsClass.ShowScreenInterstitialAd(context, new ScreenAdsClass.AdCallback() {
+                    @Override
+                    public void AppCallback() {
+                        startActivity(new Intent(context, CallHistoryActivity.class));
+                    }
+                });
                 break;
             case R.id.TCallId:
-                startActivity(new Intent(context, CallIdActivity.class));
+                ScreenAdsClass.ShowScreenInterstitialAd(context, new ScreenAdsClass.AdCallback() {
+                    @Override
+                    public void AppCallback() {
+                        startActivity(new Intent(context, CallIdActivity.class));
+                    }
+                });
                 break;
         }
     }
