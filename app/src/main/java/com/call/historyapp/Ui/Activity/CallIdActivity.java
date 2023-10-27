@@ -17,7 +17,7 @@ import com.call.historyapp.R;
 public class CallIdActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Context context;
-    private TextView TvTitle, BtnLocation, BtnSystemUsage, BtnBattery, BtnDevice, BtnISD, BtnStd, BtnBank;
+    private TextView TvTitle, BtnLocation, BtnSystemUsage, BtnBattery, BtnISD, BtnStd, BtnBank;
     private ImageView IvBack;
 
     @Override
@@ -36,7 +36,6 @@ public class CallIdActivity extends AppCompatActivity implements View.OnClickLis
         BtnLocation = (TextView) findViewById(R.id.BtnLocation);
         BtnSystemUsage = (TextView) findViewById(R.id.BtnSystemUsage);
         BtnBattery = (TextView) findViewById(R.id.BtnBattery);
-        BtnDevice = (TextView) findViewById(R.id.BtnDevice);
         BtnISD = (TextView) findViewById(R.id.BtnISD);
         BtnStd = (TextView) findViewById(R.id.BtnStd);
         BtnBank = (TextView) findViewById(R.id.BtnBank);
@@ -47,14 +46,13 @@ public class CallIdActivity extends AppCompatActivity implements View.OnClickLis
         BtnLocation.setOnClickListener(this);
         BtnSystemUsage.setOnClickListener(this);
         BtnBattery.setOnClickListener(this);
-        BtnDevice.setOnClickListener(this);
         BtnISD.setOnClickListener(this);
         BtnStd.setOnClickListener(this);
         BtnBank.setOnClickListener(this);
     }
 
     private void CallInitActions() {
-        ScreenAdsClass.ShowScreenNativeBannerAds(context,((ProgressBar) findViewById(R.id.progressBarAd)),(RelativeLayout) findViewById(R.id.RlAdvertisement));
+        ScreenAdsClass.ShowScreenNativeBannerAds(context, ((ProgressBar) findViewById(R.id.progressBarAd)), (RelativeLayout) findViewById(R.id.RlAdvertisement));
         TvTitle.setText(R.string.call_history);
     }
 
@@ -72,9 +70,6 @@ public class CallIdActivity extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.BtnBattery:
                 GotoActivity(BatteryActivity.class);
-                break;
-            case R.id.BtnDevice:
-                GotoActivity(DeviceActivity.class);
                 break;
             case R.id.BtnISD:
                 GotoActivity(ISDActivity.class);

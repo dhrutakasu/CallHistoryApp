@@ -2,13 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.call.historyapp">
 
-    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
 
     <queries>
         <package android:name="com.facebook.katana" />
         <package android:name="com.whatsapp" />
     </queries>
 
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
@@ -49,10 +49,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Ui.Activity.ISDActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Ui.Activity.DeviceActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity

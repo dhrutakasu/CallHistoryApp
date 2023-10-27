@@ -88,9 +88,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             String s = Manifest.permission.CALL_PHONE;
             String s1 = Manifest.permission.READ_PHONE_STATE;
-            String s2 = Manifest.permission.READ_MEDIA_IMAGES;
             Dexter.withContext(context)
-                    .withPermissions(s, s1, s2)
+                    .withPermissions(s, s1)
                     .withListener(new MultiplePermissionsListener() {
                         public void onPermissionsChecked(MultiplePermissionsReport report) {
                             if (report.areAllPermissionsGranted()) {
@@ -110,10 +109,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             String s = Manifest.permission.CALL_PHONE;
             String s1 = Manifest.permission.READ_PHONE_STATE;
-            String s2 = Manifest.permission.WRITE_EXTERNAL_STORAGE;
-            String s3 = Manifest.permission.READ_EXTERNAL_STORAGE;
             Dexter.withContext(context)
-                    .withPermissions(s, s1, s2, s3)
+                    .withPermissions(s, s1)
                     .withListener(new MultiplePermissionsListener() {
                         public void onPermissionsChecked(MultiplePermissionsReport report) {
                             if (report.areAllPermissionsGranted()) {

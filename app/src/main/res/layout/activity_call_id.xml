@@ -67,19 +67,19 @@
             android:text="@string/battery_info_none"
             android:textColor="@color/white"
             android:textSize="@dimen/_14sdp"
-            app:layout_constraintEnd_toStartOf="@+id/BtnDevice"
+            app:layout_constraintEnd_toStartOf="@+id/BtnBank"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/BtnLocation" />
 
         <TextView
-            android:id="@+id/BtnDevice"
+            android:id="@+id/BtnBank"
             android:layout_width="0dp"
             android:layout_height="@dimen/_60sdp"
             android:layout_margin="@dimen/_8sdp"
             android:background="@drawable/ic_btn_view"
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center"
-            android:text="@string/device_info"
+            android:text="@string/bank_services"
             android:textColor="@color/white"
             android:textSize="@dimen/_14sdp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -114,23 +114,7 @@
             android:textSize="@dimen/_14sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/BtnISD"
-            app:layout_constraintTop_toBottomOf="@id/BtnDevice" />
-
-        <TextView
-            android:id="@+id/BtnBank"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/_60sdp"
-            android:layout_margin="@dimen/_8sdp"
-            android:background="@drawable/ic_btn_view"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:gravity="center"
-            android:text="@string/bank_services"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_14sdp"
-            app:layout_constraintWidth_percent="0.48"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/BtnISD" />
+            app:layout_constraintTop_toBottomOf="@id/BtnBank" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideTop"
